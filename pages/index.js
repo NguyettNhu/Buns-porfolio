@@ -2,8 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Background from '../components/Background'
 import KokoMascot from '../components/KokoMascot'
+import { useState } from 'react'
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <>
       <Head>
@@ -34,7 +37,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/NguyettNhu"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -42,7 +45,38 @@ export default function Home() {
                 </a>
               </li>
             </ul>
+            <button 
+              className="mobile-menu-btn"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
           </div>
+          {isMobileMenuOpen && (
+            <ul className="mobile-menu">
+              <li>
+                <Link href="/works" onClick={() => setIsMobileMenuOpen(false)}>Works</Link>
+              </li>
+              <li>
+                <Link href="/posts" onClick={() => setIsMobileMenuOpen(false)}>Posts</Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/NguyettNhu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          )}
         </div>
       </nav>
 
