@@ -311,8 +311,8 @@ body {
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 1000;
   color: #2d3748;
   margin-bottom: 2rem;
   text-align: center;
@@ -332,8 +332,9 @@ body {
 }
 
 .section-description {
-  color: #718096;
-  font-size: 1.125rem;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 700;
   max-width: 600px;
   margin: 0 auto 3rem;
   text-align: center;
@@ -348,7 +349,7 @@ body {
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   backdrop-filter: blur(20px);
   border-radius: 24px;
   border: 3px solid #f7fafc;
@@ -378,14 +379,16 @@ body {
 }
 
 .skill-title {
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 1000;
   color: #2d3748;
   margin-bottom: 1rem;
 }
 
 .skill-description {
-  color: #718096;
+  color: #2d3748;
+  font-size: 1.25rem;
+  font-weight: 700;
   line-height: 1.6;
 }
 

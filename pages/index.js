@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Background from '../components/Background'
-import KokoMascot from '../components/KokoMascot'
+// ...existing code...
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -115,12 +116,18 @@ export default function Home() {
 
             <div className="hero-visual">
               <div className="hero-avatar-section">
-                <img
-                  src="/images/nhunguyet.jpg"
-                  alt="Nhu Nguyet"
-                  className="avatar"
-                />
-                <KokoMascot size="180px" />
+                  <Image
+                    src="/images/nhunguyet.jpg"
+                    alt="Nhu Nguyet"
+                    width={250}
+                    height={250}
+                    className="avatar"
+                    priority
+                    quality={80}
+                    style={{ borderRadius: '50%', border: '5px solid #e2e8f0', objectFit: 'cover' }}
+                    sizes="(max-width: 480px) 120px, 250px"
+                  />
+// ...existing code...
               </div>
             </div>
           </section>
